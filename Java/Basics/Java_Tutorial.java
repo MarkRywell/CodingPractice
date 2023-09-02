@@ -28,14 +28,13 @@ public class Java_Tutorial {
 
         //Find matching details
         switch (JeepneyID) {
-            case "12A" -> location = "Carbon";
-            case "12C" -> location = "Panganiban";
-            case "12F" -> location = "Taboan";
-            case "12G", "12I" -> location = "Mabolo";
-            case "12L" -> location = "Labangon";
-            case "13C" -> location = "Talamban";
-            case "14D" -> location = "Capitol";
-            default -> System.out.println("Jeepney cant be located!");
+            case "12A": location = "Carbon";
+            case "12C": location = "Panganiban";
+            case "12F": location = "Taboan";
+            case "12L": location = "Labangon";
+            case "13C": location = "Talamban";
+            case "14D": location = "Capitol";
+            default: System.out.println("Jeepney cant be located!");
         }
 
         //Print out result
