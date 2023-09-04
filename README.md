@@ -1,2 +1,1 @@
-# 1st-Project
-Any python idea
+Practice Codes
