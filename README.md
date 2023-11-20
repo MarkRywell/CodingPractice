@@ -1,1 +1,7 @@
-Practice Codes
+## Practice Codes
+
+# Languages
+* Javascript
+* Python
+* Dart
+* Java
