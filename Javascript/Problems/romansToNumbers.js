@@ -1,6 +1,31 @@
 // Convert Romans to Numbers
 
-const romansToNumber = (input) => {
+const romansToNumber1 = (input) => {
+    const romans = {
+        'I': 1,
+        'V': 5,
+        'X': 10,
+        'L': 50,
+        'C': 100,
+        'D': 500,
+        'M':1000
+    }
+
+    let value = 0;
+
+    for(let i = 0; i < input.length; i++) {
+        if(romans[input[i]] > 0 && romans[input[i]] > romans[input[i - 1]]) {
+            value += ((romans[input[i - 1]] - romans[input[i]]) * -1) - romans[input[i - 1]];
+        }
+        else {
+            value += romans[input[i]]
+        }
+    }
+
+    return value
+}
+
+const romansToNumber2 = (input) => {
     const romans = {
         'I': 1,
         'V': 5,
@@ -33,7 +58,10 @@ const romansToNumber = (input) => {
     return value;
 }
 
-console.log(romansToNumber('CDXIV'))
+console.log(romansToNumber1('CDXIV')) // 414
+console.log(romansToNumber2('CDXIV')) // 414
+console.log(romansToNumber1('CLI')) // 151
+console.log(romansToNumber2('CLI')) // 151
 
 
 
