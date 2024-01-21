@@ -8,21 +8,20 @@ const romansToNumber1 = (input) => {
         'L': 50,
         'C': 100,
         'D': 500,
-        'M':1000
-    }
+        'M': 1000
+    };
 
     let value = 0;
 
-    for(let i = 0; i < input.length; i++) {
-        if(romans[input[i]] > 0 && romans[input[i]] > romans[input[i - 1]]) {
-            value += ((romans[input[i - 1]] - romans[input[i]]) * -1) - romans[input[i - 1]];
+    for(let x = 0; x < input.length; x ++) {        
+        if(romans[input[x]] > 0 && romans[input[x]] > romans[input[x - 1]]) {
+            value += romans[input[x]] - (romans[input[x - 1]] * 2);
         }
         else {
-            value += romans[input[i]]
+            value += romans[input[x]]
         }
     }
-
-    return value
+    return value;
 }
 
 const romansToNumber2 = (input) => {
@@ -62,6 +61,3 @@ console.log(romansToNumber1('CDXIV')) // 414
 console.log(romansToNumber2('CDXIV')) // 414
 console.log(romansToNumber1('CLI')) // 151
 console.log(romansToNumber2('CLI')) // 151
-
-
-
