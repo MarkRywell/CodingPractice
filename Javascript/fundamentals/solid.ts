@@ -1,5 +1,7 @@
 class NotificationService {
-    send(message: string) {}
+    send(message: string) {
+        throw new Error("Method 'send()' must be implemented.");
+    }
 }
 
 class MessageFormatter {
